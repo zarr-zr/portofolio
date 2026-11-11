@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/style.js" defer></script>
   <script src="js/latihan.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header>
@@ -23,7 +24,9 @@
           <li><a href="kontak.html">Kontak</a></li>
         </ul>
       </nav>
-      
+      <button type="button" id="tombol-tema" class="tombol-tema">
+          Mode gelap
+        </button>
       <details class="menu-ponsel">
         <summary>Menu</summary>
         <nav>
@@ -34,7 +37,6 @@
           </ul>
         </nav>
       </details>
-    </div>
   </header>
 
   <main>
@@ -67,7 +69,9 @@
           </p>
           <p>
             <label for="pesan">Pesan</label><br>
-            <textarea id="pesan" name="pesan" rows="5" cols="40" placeholder="Tulis pesanmu di sini" required></textarea>
+            <textarea id="pesan" name="pesan" rows="5" cols="40" maxlength="300"
+             placeholder="Tulis pesanmu di sini" required></textarea><br>
+            <span id="hitung-karakter" class="keterangan">0/300 karakter</span>placeholder="Tulis pesanmu di sini" required </textarea>
           </p>
           <button type="submit">Kirim Pesan</button>
         </form>

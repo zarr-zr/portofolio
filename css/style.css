@@ -262,3 +262,140 @@ footer a {
     font-size: 2.75rem;
   }
 }
+
+/* 10. Tombol tema, filter, dan label kategori */
+  .tombol-tema {
+    padding: 0.5rem 0.9rem;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    font-size: 0.9rem;
+}
+/* 11. Tema gelap (percobaan pertama) */
+body.gelap {
+background-color: #121A24;
+color: #E3E8EE;
+}
+:root {
+--warna-utama: #1D3557;
+--warna-judul: #1D3557;
+--warna-aksen: #E63946;
+--warna-tautan: #E63946;
+--warna-latar: #F1FAEE;
+--warna-teks: #333333;
+--warna-kartu: #e7f1ed;
+--warna-garis: #202523;
+}
+
+/* Tema gelap: isi variabel diganti saat body memiliki class
+gelap */
+body.gelap {
+--warna-utama: #0B1526;
+--warna-judul: #052b2c;
+--warna-tautan: #FF8A8A;
+--warna-latar: #121A24;
+--warna-teks: #85d4ce;
+--warna-kartu: #1C2836;
+--warna-garis: #34465A;
+}
+/* Kartu halaman Kontak */
+.kartu {
+    background-color: var(--warna-kartu);
+    color: var(--warna-teks);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--warna-garis);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+/* Judul kartu kontak */
+.kartu h2 {
+    color: var(--warna-judul);
+}
+
+/* Paragraf */
+.kartu p {
+    color: var(--warna-teks);
+}
+
+/* Label formulir */
+.kartu label {
+    color: var(--warna-teks);
+    font-weight: 600;
+}
+
+/* Input, pilihan, dan pesan */
+.kartu input,
+.kartu select,
+.kartu textarea {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Efek ketika input dipilih */
+.kartu input:focus,
+.kartu select:focus,
+.kartu textarea:focus {
+    outline: 2px solid var(--warna-aksen);
+    border-color: var(--warna-aksen);
+}
+
+/* Tombol kirim */
+.kartu button {
+    background-color: var(--warna-aksen);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Memperbaiki warna tulisan saat mode gelap */
+body.gelap h2,
+body.gelap .kartu h3 {
+    color: #a8d8dc;
+}
+
+/* Warna label kategori */
+body.gelap .label {
+    color: #ffffff;
+}
+
+/* Warna paragraf kartu */
+body.gelap .kartu p {
+    color: #e5e7eb;
+}
+
+
+/* Animasi menu buka dan tutup */
+.menu-ponsel nav {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.4s ease;
+}
+
+.menu-ponsel[open]:not(.menutup) nav {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-ponsel nav ul {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu-ponsel summary {
+    cursor: pointer;
+}
