@@ -1,6 +1,5 @@
-// JavaScript portofolio Jahroh
+// JavaScript portofolio Andi Pratama
 // Dipasang di ketiga halaman dengan defer
-
 
 // 1. Daftar keahlian (halaman Beranda), data dari data/keahlian.json
 const daftarSkill = document.querySelector("#daftar-skill");
@@ -8,18 +7,18 @@ const jumlahSkill = document.querySelector("#jumlah-skill");
 
 async function muatKeahlian() {
     try {
-        const response = await fetch("data/keahlian.json");
+        const response = await fetch ("data/keahlian.json");
         if (!response.ok) {
-            throw new Error(`Status ${response.status}`);
+            throw new Error('Status ${response.status}');
         }
         const skills = await response.json();
 
         skills.forEach((skill) => {
             const item = document.createElement("li");
-            item.textContent = `${skill.nama} (${skill.level})`;
+            item.textContent = '${skill.nama} (${skill.level})';
             daftarSkill.appendChild(item);
         });
-        jumlahSkill.textContent = `Ada ${skills.length} keahlian yang sedang saya kembangkan.`;
+        jumlahSkill.textContent = 'Ada ${skills.length} keahlian yang sedang saya kembangkan.';
     } catch (error) {
         jumlahSkill.textContent = "Daftar keahlian gagal dimuat.";
         console.error(error);
@@ -49,7 +48,7 @@ const hitungKarakter = document.querySelector("#hitung-karakter");
 
 if (kotakPesan) {
     kotakPesan.addEventListener("input", () => {
-        hitungKarakter.textContent = `${kotakPesan.value.length}/300 karakter`;
+        hitungKarakter.textContent = '${kotakPesan.value.length}/300 karakter';
     });
 }
 
@@ -59,7 +58,7 @@ const proyek = [
         judul: "Halaman Profil Pertama",
         kategori: "HTML",
         gambar: "modul1.png",
-        alt: "Tangkapan layar halaman profil Jahroh",
+        alt: "Tangkapan layar halaman profil Danisha Kamelia",
         deskripsi: "Halaman web pertama saya, dibuat dengan HTML dasar.",
     },
     {
@@ -115,7 +114,7 @@ function buatKartu(item) {
 function tampilkanProyek(daftar) {
     const semuaKartu = daftar.map((item) => buatKartu(item));
     daftarProyek.innerHTML = semuaKartu.join("");
-    jumlahProyek.textContent = `Menampilkan ${daftar.length} dari ${proyek.length} proyek`;
+    jumlahProyek.textContent = 'Menampilkan ${daftar.length} dari ${proyek.length} proyek';
 }
 
 function pasangFilter(idTombol, kategori) {
@@ -137,7 +136,7 @@ if (daftarProyek) {
 }
 
 // 5. Repositori GitHub terbaru (halaman Proyek)
-const username = "zarr-zr";
+const username = "KHILDAKAMILIYA1822";
 const alamatRepo = 'https://api.github.com/users/zarr-zr';
 const pilihan = "?sort=updated&per_page=6";
 
@@ -151,7 +150,7 @@ async function ambilRepo() {
         const response = await fetch(alamatRepo + pilihan);
 
         if (!response.ok) {
-            throw new Error(`Status ${response.status}`);
+            throw new Error('Status ${response.status}');
         }
 
         const repos = await response.json();
@@ -168,7 +167,7 @@ async function ambilRepo() {
             daftarRepo.appendChild(item);
         });
 
-        statusRepo.textContent = `${repos.length} repositori yang terakhir diperbarui.`;
+        statusRepo.textContent = '${repos.length} repositori yang terakhir diperbarui.';
 
     } catch (error) {
         statusRepo.textContent = "Maaf, daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";

@@ -1,26 +1,22 @@
 [
   {
-    "nama": "JavaScript",
+    "nama": "HTML",
     "level": "Menengah"
   },
   {
-    "nama": "Next.js",
-    "level": "Dasar"
-  },
-  {
-    "nama": "C",
-    "level": "Dasar"
-  },
-  {
-    "nama": "Linux",
-    "level": "Dasar"
-  },
-  {
-    "nama": "HTML dasar",
+    "nama": "CSS",
     "level": "Menengah"
   },
   {
-    "nama": "Mengetik cepat",
+    "nama": "Git dan GitHub",
+    "level": "Dasar"
+  },
+  {
+    "nama": "Desain poster dengan Canva",
     "level": "Mahir"
+  },
+  {
+    "nama": "JavaScript",
+    "level": "Dasar"
   }
 ]
