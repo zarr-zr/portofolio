@@ -299,3 +299,89 @@ body.gelap {
   --warna-kartu: #1C2836;
   --warna-garis: #34465A;
 }
+/* 12. Perbaikan tampilan responsif HP */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container,
+header,
+main,
+footer,
+section,
+article {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Perbaikan layar HP */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .navbar {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+  }
+
+  .hero p {
+    overflow-wrap: break-word;
+  }
+
+  .daftar-kartu {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .daftar-kartu .kartu {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    overflow-wrap: anywhere;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+}

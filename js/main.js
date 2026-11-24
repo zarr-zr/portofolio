@@ -7,7 +7,7 @@ const jumlahSkill = document.querySelector("#jumlah-skill");
 
 async function muatKeahlian() {
     try {
-        const response = await fetch ("data/keahlian.json");
+        const response = await fetch("data/keahlian.json");
         if (!response.ok) {
             throw new Error('Status ${response.status}');
         }
